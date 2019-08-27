@@ -72,7 +72,7 @@ namespace Marketplace.Framework
                     continue;
                 }
 
-                foreach (var property in t.GetProperties(flags))
+                foreach (var property in t.GetRuntimeFields())
                 {
                     yield return new Member(property);
                 }

@@ -24,7 +24,7 @@ namespace Marketplace.Domain
                 throw new ArgumentException($"Currency {currencyCode} is not valid.");
             }
             
-            if (decimal.Round(amount, currency.DecimalPlaces) != amount)
+            if (Math.Round(amount, currency.DecimalPlaces) != amount)
             {
                 throw new ArgumentOutOfRangeException(nameof(amount), $"Amount cannot have more than {currency.DecimalPlaces} decimals.");
             }
